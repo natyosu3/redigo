@@ -227,6 +227,7 @@ func DialContext(ctx context.Context, network, address string, options ...DialOp
 			Timeout:   time.Second * 30,
 			KeepAlive: time.Minute * 5,
 		},
+		useTLS: true,
 		tlsHandshakeTimeout: time.Second * 10,
 	}
 	for _, option := range options {
